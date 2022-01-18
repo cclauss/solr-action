@@ -1,0 +1,21 @@
+name: 'Setup Solr'
+description: 'Setup a Solr instance'
+author: 'patric-dosch-vi'
+branding:
+  icon: 'database'
+  color: 'blue'
+inputs:
+  # See https://hub.docker.com/_/solr for supported versions
+  version:
+    description: 'Version of Solr to use'
+    required: false
+    default: 'latest'
+  core name:
+    description: 'name (e.g. mycore) of the core to create'
+    required: false
+  config path:
+    description: 'config path (e.g. config) that should be used when creating the core'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
