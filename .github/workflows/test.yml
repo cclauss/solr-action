@@ -13,4 +13,4 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - uses: patric-dosch-vi/solr-action@1.0
+      - uses: patric-dosch-vi/solr-action@v1
