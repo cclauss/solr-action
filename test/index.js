@@ -1,8 +1,11 @@
 const solr = require('solr-client')
-const client = solr.createClient({core: 'corename'})
+const client = solr.createClient({core: 'core5'})
 
 async function run(){
-  await client.ping();
+  const response = await client.ping().catch(error => {
+    throw new Error(error);
+  });
+  console.log(response)
 }
 
 run().catch((err) => {
