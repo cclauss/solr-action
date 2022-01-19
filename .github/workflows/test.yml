@@ -13,10 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - uses: patric-dosch-vi/solr-action@v1
-        with:
-          version: latest
-          core name: corename
+#      - uses: patric-dosch-vi/solr-action@v1
+#        with:
+#          version: latest
+#          core name: corename
 
       - uses: actions/setup-node@v1
 
