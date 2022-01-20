@@ -19,6 +19,8 @@ jobs:
 #          core name: corename
 
       - uses: actions/setup-node@v1
+        with:
+          node-version: '12.22.9'
 
       - run: npm ci
         working-directory: test
