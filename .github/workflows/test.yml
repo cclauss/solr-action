@@ -20,7 +20,7 @@ jobs:
           core name: corename
           config path: test/resources/solr/conf
 
-      - run: echo "The command was ${{ steps.hello.outputs.command }}"
+      - run: echo "The command was ${{ steps.hello.outputs.outttt }}"
 
       - uses: actions/setup-node@v1
         with:

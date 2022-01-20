@@ -17,5 +17,5 @@ then
 docker_run="$docker_run -d /opt/solr/server/solr/configsets/myconfig"
 fi
 
-echo "::set-output name=command::$docker_run"
-sh -c "$docker_run"
+echo "::set-output name=outttt::$docker_run"
+# sh -c "$docker_run"
