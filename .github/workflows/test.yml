@@ -15,8 +15,9 @@ jobs:
 
       - uses: patric-dosch-vi/solr-action@v1
         with:
-          version: latest
+          version: 8.11.1
           core name: corename
+          config path: test/resources/solr/conf
 
       - uses: actions/setup-node@v1
         with:
