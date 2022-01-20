@@ -1,6 +1,3 @@
-const core = require('@actions/core');
-const github = require('@actions/github');
-
 const solr = require('solr-client')
 
 async function run(){
@@ -10,6 +7,5 @@ async function run(){
 
 run().catch((err) => {
   console.error(err)
-  // core.setFailed(err.message);
   process.exit(1)
 })
