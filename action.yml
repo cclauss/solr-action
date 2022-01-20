@@ -16,6 +16,9 @@ inputs:
   config path:
     description: 'config path (e.g. config) that should be used when creating the core'
     required: false
+outputs:
+  command:
+    description: 'The executed command'
 runs:
   using: 'docker'
   image: 'Dockerfile'
