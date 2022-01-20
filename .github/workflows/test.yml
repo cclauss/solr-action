@@ -14,10 +14,13 @@ jobs:
       - uses: actions/checkout@v1
 
       - uses: patric-dosch-vi/solr-action@v1
+        id: hello
         with:
           version: 8.11.1
           core name: corename
           config path: test/resources/solr/conf
+
+      - run: echo "The command was ${{ steps.hello.outputs.command }}"
 
       - uses: actions/setup-node@v1
         with:
