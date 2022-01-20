@@ -1,3 +1,6 @@
+const core = require('@actions/core');
+const github = require('@actions/github');
+
 const solr = require('solr-client')
 const client = solr.createClient({core: 'core5'})
 
@@ -10,5 +13,6 @@ async function run(){
 
 run().catch((err) => {
   console.error(err)
+  core.setFailed(err.message);
   process.exit(1)
 })

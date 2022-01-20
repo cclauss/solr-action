@@ -1,4 +1,4 @@
-# PostgreSQL GitHub Action
+# Solr GitHub Action
 
 This [GitHub Action](https://github.com/features/actions) sets up a Solr instance.
 
