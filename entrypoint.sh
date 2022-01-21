@@ -4,10 +4,9 @@ docker_run="docker run"
 docker_run="$docker_run -d -p 8983:8983 solr:$INPUT_VERSION"
 if [ ! -z "$INPUT_CONFIG_PATH" ]
 then
-# REPO=`echo "$GITHUB_REPOSITORY" | cut -d "/" -f 2`
-# INIT_SCRIPT_PATH="/home/runner/work/$REPO/$REPO/$INPUT_CONFIG_PATH"
-INIT_SCRIPT_PATH = "$GITHUB_WORKSPACE/$INPUT_CONFIG_PATH"
-docker_run="$docker_run -v $INIT_SCRIPT_PATH:/myconfig:ro"
+REPO=`echo "$GITHUB_REPOSITORY" | cut -d "/" -f 2`
+INIT_SCRIPT_PATH="/home/runner/work/$REPO/$REPO/$INPUT_CONFIG_PATH"
+docker_run="$docker_run -v $INIT_SCRIPT_PATH:/myconfig"
 fi
 
 if [ ! -z "$INPUT_CORE_NAME" ]
@@ -21,4 +20,5 @@ docker_run="$docker_run -d /myconfig"
 fi
 
 echo "::set-output name=outttt::$docker_run"
+echo "$docker_run"
 sh -c "$docker_run"
